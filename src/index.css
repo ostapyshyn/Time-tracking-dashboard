@@ -1,17 +1,15 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+--Blue: hsl(246, 80%, 60%)
+--Light_red: hsl(15, 100%, 70%)
+--Soft_blue: hsl(195, 74%, 62%)
+--Light_red: hsl(348, 100%, 68%)
+--Lime_green: hsl(145, 58%, 55%)
+--Violet: hsl(264, 64%, 52%)
+--Soft_orange: hsl(43, 84%, 65%)
+--Very_dark blue: hsl(226, 43%, 10%)
+--Dark_blue: hsl(235, 46%, 20%)
+--Desaturated_blue: hsl(235, 45%, 61%)
+--Pale_Blue: hsl(236, 100%, 87%)
 }
 
 a {
@@ -27,8 +25,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
 }
 
 h1 {

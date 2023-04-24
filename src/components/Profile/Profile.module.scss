@@ -1,0 +1,44 @@
+@import '../../index.css';
+
+section {
+  background: var(--dark_blue);
+  border-radius: 15px;
+  max-width: 255px;
+  .about {
+    background-color: var(--blue);
+    padding-top: 37px;
+    padding-left: 32px;
+    padding-bottom: 80px;
+    border-radius: 15px;
+    border-radius: 15px;
+    .profile_img {
+      width: 78px;
+      height: 78px;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+    }
+  }
+  .report {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--pale_blue);
+  }
+  .name {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 47px;
+    color: var(--white);
+  }
+  .list {
+    background: var(--dark_blue);
+    border-radius: 15px;
+    .period {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: var(--desaturated_blue);
+      list-style-type: none;
+    }
+  }
+}

@@ -1,7 +1,16 @@
 import styles from './Profile.module.scss'
 import profile from '../../assets/image-jeremy.png'
 
-const Profile = () => {
+interface Props {
+  period: string
+  setPeriod: (name: string) => void
+}
+
+const Profile = ({ period, setPeriod }: Props) => {
+  const activeStyle = {
+    color: '#fff',
+  }
+
   return (
     <section>
       <div className={styles.about}>
@@ -11,9 +20,24 @@ const Profile = () => {
       </div>
 
       <ul className={styles.list}>
-        <li className={styles.period}>Daily</li>
-        <li className={styles.period}>Weekly</li>
-        <li className={styles.period}>Monthly</li>
+        <li
+          className={styles.period}
+          onClick={() => setPeriod('Daily')}
+          style={{ ...(period === 'Daily' ? activeStyle : null) }}>
+          Daily
+        </li>
+        <li
+          className={styles.period}
+          onClick={() => setPeriod('Weekly')}
+          style={{ ...(period === 'Weekly' ? activeStyle : null) }}>
+          Weekly
+        </li>
+        <li
+          className={styles.period}
+          onClick={() => setPeriod('Monthly')}
+          style={{ ...(period === 'Monthly' ? activeStyle : null) }}>
+          Monthly
+        </li>
       </ul>
     </section>
   )

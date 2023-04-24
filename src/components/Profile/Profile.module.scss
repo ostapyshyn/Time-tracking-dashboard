@@ -49,6 +49,9 @@ section {
       line-height: 21px;
       color: var(--desaturated_blue);
       list-style-type: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

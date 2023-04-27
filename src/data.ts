@@ -1,4 +1,16 @@
-const data = [
+export interface ISeat {
+  current: number
+  previous: number
+}
+
+type Interval = Array<{
+  title: string
+  timeframes: {
+    [key: string]: ISeat
+  }
+}>
+
+const data: Interval = [
   {
     title: 'Work',
     timeframes: {

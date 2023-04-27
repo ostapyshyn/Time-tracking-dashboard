@@ -32,7 +32,7 @@ const colors: Icons = {
 }
 
 function App() {
-  const [period, setPeriod] = useState('Weekly')
+  const [period, setPeriod] = useState('weekly')
 
   return (
     <main className="App">
@@ -43,6 +43,7 @@ function App() {
             title={item.title}
             icon={icons[item.title.toLowerCase()]}
             bgColor={colors[item.title.toLowerCase()]}
+            data={item.timeframes[period]}
           />
         ))}
       </div>

@@ -22,20 +22,20 @@ const Profile = ({ period, setPeriod }: Props) => {
       <ul className={styles.list}>
         <li
           className={styles.period}
-          onClick={() => setPeriod('Daily')}
-          style={{ ...(period === 'Daily' ? activeStyle : null) }}>
+          onClick={() => setPeriod('daily')}
+          style={{ ...(period === 'daily' ? activeStyle : null) }}>
           Daily
         </li>
         <li
           className={styles.period}
-          onClick={() => setPeriod('Weekly')}
-          style={{ ...(period === 'Weekly' ? activeStyle : null) }}>
+          onClick={() => setPeriod('weekly')}
+          style={{ ...(period === 'weekly' ? activeStyle : null) }}>
           Weekly
         </li>
         <li
           className={styles.period}
-          onClick={() => setPeriod('Monthly')}
-          style={{ ...(period === 'Monthly' ? activeStyle : null) }}>
+          onClick={() => setPeriod('monthly')}
+          style={{ ...(period === 'monthly' ? activeStyle : null) }}>
           Monthly
         </li>
       </ul>

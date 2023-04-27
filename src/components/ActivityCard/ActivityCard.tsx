@@ -8,6 +8,7 @@ interface Props {
   icon: string
   bgColor: string
   data: ISeat
+  time_text: string
 }
 
 const formatHour = (hour: number) => {
@@ -15,26 +16,26 @@ const formatHour = (hour: number) => {
   return hour + time
 }
 
-const ActivityCard = ({ title, icon, bgColor, data }: Props) => {
+const ActivityCard = ({ title, icon, bgColor, data, time_text }: Props) => {
   const bgStyle = {
     backgroundColor: `var(${bgColor})`,
     backgroundImage: `url(${icon})`,
     backgroundPosition: 'top -11px right 16px',
     backgroundRepeat: 'no-repeat',
   }
-  console.log(data, 'lol')
 
   return (
     <section className={styles.activity_card} style={bgStyle}>
       <div className={styles.card}>
         <div className={styles.activity_bar}>
           <p className={styles.activity}>{title}</p>
-
           <Dots fill={'var(--pale_blue)'} className={styles.dots} />
         </div>
 
         <p className={styles.hours}>{formatHour(data.current)}</p>
-        <p className={styles.last}>Last Week - 36hrs</p>
+        <p className={styles.last}>
+          {time_text} - {formatHour(data.previous)}
+        </p>
       </div>
     </section>
   )

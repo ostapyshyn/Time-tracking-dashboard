@@ -22,6 +22,12 @@ const icons: Icons = {
   'self care': care,
 }
 
+const time_text: Icons = {
+  daily: 'Yesterday',
+  weekly: 'Last Week',
+  monthly: 'Last Month',
+}
+
 const colors: Icons = {
   work: '--light_redd',
   play: '--soft_blue',
@@ -44,6 +50,8 @@ function App() {
             icon={icons[item.title.toLowerCase()]}
             bgColor={colors[item.title.toLowerCase()]}
             data={item.timeframes[period]}
+            key={item.title}
+            time_text={time_text[period]}
           />
         ))}
       </div>

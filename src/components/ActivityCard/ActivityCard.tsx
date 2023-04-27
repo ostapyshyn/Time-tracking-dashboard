@@ -4,11 +4,14 @@ import { ReactComponent as Dots } from '../../assets/icon-ellipsis.svg'
 
 interface Props {
   title: string
+  icon: string
+  bgColor: string
 }
 
-const ActivityCard = ({ title }: Props) => {
+const ActivityCard = ({ title, icon, bgColor }: Props) => {
   const bgStyle = {
-    backgroundImage: `url(${work})`,
+    backgroundColor: `var(${bgColor})`,
+    backgroundImage: `url(${icon})`,
     backgroundPosition: 'top -11px right 16px',
     backgroundRepeat: 'no-repeat',
   }

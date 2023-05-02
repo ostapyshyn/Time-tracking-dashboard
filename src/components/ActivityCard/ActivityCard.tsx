@@ -1,5 +1,4 @@
 import styles from './ActivityCard.module.scss'
-import work from '../../assets/icon-work.svg'
 import { ReactComponent as Dots } from '../../assets/icon-ellipsis.svg'
 import { ISeat } from '../../data'
 
@@ -11,10 +10,7 @@ interface Props {
   time_text: string
 }
 
-const formatHour = (hour: number) => {
-  const time = hour > 1 ? 'hrs' : 'hr'
-  return hour + time
-}
+const formatHour = (hour: number) => hour + (hour > 1 ? 'hrs' : 'hr')
 
 const ActivityCard = ({ title, icon, bgColor, data, time_text }: Props) => {
   const bgStyle = {
@@ -31,11 +27,12 @@ const ActivityCard = ({ title, icon, bgColor, data, time_text }: Props) => {
           <p className={styles.activity}>{title}</p>
           <Dots fill={'var(--pale_blue)'} className={styles.dots} />
         </div>
-
-        <p className={styles.hours}>{formatHour(data.current)}</p>
-        <p className={styles.last}>
-          {time_text} - {formatHour(data.previous)}
-        </p>
+        <div className={styles.time_info}>
+          <p className={styles.hours}>{formatHour(data.current)}</p>
+          <p className={styles.last}>
+            {time_text} - {formatHour(data.previous)}
+          </p>
+        </div>
       </div>
     </section>
   )

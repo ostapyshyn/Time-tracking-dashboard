@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css'
+// import './App.module.scss'
+
 import data from './data.ts'
 import Profile from './components/Profile'
 import ActivityCard from './components/ActivityCard/'
@@ -10,6 +11,7 @@ import study from './assets/icon-study.svg'
 import exercise from './assets/icon-exercise.svg'
 import social from './assets/icon-social.svg'
 import care from './assets/icon-self-care.svg'
+import styles from './App.module.scss'
 export interface Icons {
   [key: string]: string
 }
@@ -41,9 +43,9 @@ function App() {
   const [period, setPeriod] = useState('weekly')
 
   return (
-    <main className="App">
+    <main className={styles.App}>
       <Profile period={period} setPeriod={setPeriod} />
-      <div className="cards">
+      <div className={styles.cards}>
         {data.map((item) => (
           <ActivityCard
             title={item.title}

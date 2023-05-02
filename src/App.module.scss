@@ -1,0 +1,32 @@
+@import './index.scss';
+
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1110px;
+  margin: auto;
+  @include mq(1083px) {
+    height: auto;
+    flex-direction: column;
+    padding-block: 81px;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  transition: none;
+  @include mq(1160px) {
+    max-width: 750px;
+  }
+  @include mq(1083px) {
+    flex-direction: column;
+    max-width: 330px;
+    width: 100%;
+  }
+}

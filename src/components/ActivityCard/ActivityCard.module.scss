@@ -1,10 +1,17 @@
-@import '../../index.css';
+@import '../../index.scss';
 
 .activity_card {
   padding-top: 45px;
   border-radius: 15px 15px 16px 16px;
   max-width: 255px;
   width: 100%;
+  @include mq(1160px) {
+    max-width: 230px;
+  }
+  @include mq(1083px) {
+    padding-top: 38px;
+    max-width: 330px;
+  }
 
   .card {
     background: var(--dark_blue);
@@ -12,6 +19,12 @@
     padding-inline: 30px;
     padding-bottom: 32px;
     border-radius: 15px;
+    @include mq(1083px) {
+      padding-top: 45px;
+      padding-inline: 24px;
+      padding-block: 28px;
+    }
+
     &:hover {
       cursor: pointer;
       background-color: var(--hover_blue);
@@ -21,6 +34,9 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
+      @include mq(1083px) {
+        margin-bottom: 6px;
+      }
       .dots {
         &:hover {
           cursor: pointer;
@@ -36,19 +52,33 @@
         color: var(--white);
       }
     }
-
-    .hours {
-      font-weight: 300;
-      font-size: 56px;
-      line-height: 66px;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .last {
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 18px;
-      color: var(--pale_blue);
+    .time_info {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      @include mq(1083px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .hours {
+        font-weight: 300;
+        font-size: 56px;
+        line-height: 66px;
+        color: var(--white);
+        margin-bottom: 8px;
+        @include mq(1083px) {
+          font-size: 32px;
+          line-height: 38px;
+          margin-bottom: 0px;
+        }
+      }
+      .last {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--pale_blue);
+      }
     }
   }
 }

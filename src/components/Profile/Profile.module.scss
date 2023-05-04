@@ -48,6 +48,14 @@ section {
     :not(:last-child) {
       margin-bottom: 21px;
     }
+    @include mq(1083px) {
+      display: flex;
+      justify-content: space-between;
+      :not(:last-child) {
+        margin-bottom: 0px;
+      }
+      padding-left: 0px;
+    }
     .period {
       font-weight: 400;
       font-size: 18px;
@@ -57,6 +65,10 @@ section {
       &:hover {
         cursor: pointer;
         color: var(--white);
+      }
+      @include mq(1083px) {
+        flex: 1;
+        text-align: center;
       }
     }
   }

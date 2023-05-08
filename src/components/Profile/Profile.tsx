@@ -14,9 +14,16 @@ const Profile = ({ period, setPeriod }: Props) => {
   return (
     <section>
       <div className={styles.about}>
-        <img src={profile} alt="profile user image" className={styles.profile_img} />
-        <h2 className={styles.report}>Report for</h2>
-        <h1 className={styles.name}>Jeremy Robson</h1>
+        <div className={styles.about_info}>
+          <div>
+            <img src={profile} alt="profile user image" className={styles.profile_img} />
+          </div>
+
+          <div>
+            <h2 className={styles.report}>Report for</h2>
+            <h1 className={styles.name}>Jeremy Robson</h1>
+          </div>
+        </div>
       </div>
 
       <ul className={styles.list}>
